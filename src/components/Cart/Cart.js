@@ -8,7 +8,7 @@ function Cart() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (JSON.parse(localStorage["shopping-cart"]) !== null) {
+    if (localStorage["shopping-cart"]) {
       dispatch(updateCart(JSON.parse(localStorage["shopping-cart"]))); // Maintaing local storage
     }
   }, [localStorage["shopping-cart"]]);
